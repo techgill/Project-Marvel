@@ -80,6 +80,7 @@ class ComicsViewController: UIViewController {
                     self.vm.selectedFilter = ""
                 }
                 
+                self.vm.paginationID = 0
                 self.vm.callNetComics(offset: 0)
             }))
         }

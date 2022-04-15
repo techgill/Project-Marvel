@@ -18,6 +18,7 @@ class CharactersViewModel {
     var paginationID = 0
     var searchText: String? {
         didSet {
+            paginationID = 0
             callNetCharcters(offset: 0)
         }
     }
@@ -80,7 +81,7 @@ class CharactersViewModel {
         var params: NSDictionary = ["limit":20, "offset": offset]
         
         if let text = searchText, searchText != "" {
-            params = ["limit":20, "offset": offset, "name": text]
+            params = ["limit":20, "offset": offset, "nameStartsWith": text]
         }
         
         SVProgressHUD.show()
