@@ -1,0 +1,6 @@
+framework module Pods_Kolo {
+  umbrella header "Pods-Kolo-umbrella.h"
+
+  export *
+  module * { export * }
+}
