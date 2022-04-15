@@ -35,6 +35,7 @@ class SearchHistoryTableViewController: UITableViewController {
     }
     
     func setUpTableView() {
+        tableView.keyboardDismissMode = .onDrag
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: AAConstants.searchHistoryTokenTableViewCell, bundle: nil), forCellReuseIdentifier: AAConstants.searchHistoryTokenTableViewCell)
     }
