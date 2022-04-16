@@ -16,7 +16,12 @@ class ComicsViewModel {
     var observer = Observable("")
     
     var paginationID = 0
-    var selectedFilter = ""
+    var selectedFilter: String? {
+        didSet {
+            paginationID = 0
+            callNetComics(offset: 0)
+        }
+    }
     
     init() {
     }
@@ -74,8 +79,8 @@ class ComicsViewModel {
         
         var params: NSDictionary = ["limit":20, "offset": offset]
         
-        if selectedFilter != "" {
-            params = ["limit":20, "offset": offset, "dateDescriptor": selectedFilter]
+        if let filter = selectedFilter, filter != "" {
+            params = ["limit":20, "offset": offset, "dateDescriptor": filter]
         }
         
         SVProgressHUD.show()

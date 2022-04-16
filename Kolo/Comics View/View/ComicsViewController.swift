@@ -79,9 +79,6 @@ class ComicsViewController: UIViewController {
                 case .ALL:
                     self.vm.selectedFilter = ""
                 }
-                
-                self.vm.paginationID = 0
-                self.vm.callNetComics(offset: 0)
             }))
         }
         

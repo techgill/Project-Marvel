@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0FB4888838B1C5365136582C /* Pods_Kolo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5A1FA1AB1AAEA8ACC71452 /* Pods_Kolo.framework */; };
+		82AE5C0DD1125B922853F7F8 /* Pods_KoloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2407631FCE8E5BAB16EAEE5 /* Pods_KoloTests.framework */; };
+		BD805B252826C396C38364DA /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		FC14F1A628083C4500BFB9D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14F1A528083C4500BFB9D1 /* AppDelegate.swift */; };
 		FC14F1A828083C4500BFB9D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14F1A728083C4500BFB9D1 /* SceneDelegate.swift */; };
 		FC14F1AD28083C4500BFB9D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC14F1AB28083C4500BFB9D1 /* Main.storyboard */; };
@@ -23,6 +25,10 @@
 		FCCC819228083FB600DC91E6 /* ComicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC819028083FB600DC91E6 /* ComicCollectionViewCell.swift */; };
 		FCCC819328083FB600DC91E6 /* ComicCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCCC819128083FB600DC91E6 /* ComicCollectionViewCell.xib */; };
 		FCCC819828084B9C00DC91E6 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC819728084B9C00DC91E6 /* CharactersViewModel.swift */; };
+		FCDBAA9C280A6D16000474CA /* CharactersViewModelUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDBAA9B280A6D16000474CA /* CharactersViewModelUnitTest.swift */; };
+		FCDBAAA0280A6EE2000474CA /* CharactersViewModelDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDBAA9F280A6EE2000474CA /* CharactersViewModelDummyData.swift */; };
+		FCDBAAA8280A74FE000474CA /* ComicsViewModelUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDBAAA7280A74FE000474CA /* ComicsViewModelUnitTest.swift */; };
+		FCDBAAAA280A750A000474CA /* ComicViewModelDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDBAAA9280A750A000474CA /* ComicViewModelDummyData.swift */; };
 		FCF7DD2B280925ED00C0DB29 /* CharactersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DD2A280925ED00C0DB29 /* CharactersDataModel.swift */; };
 		FCF7DD2E28092C6A00C0DB29 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DD2D28092C6A00C0DB29 /* Extensions.swift */; };
 		FCF7DD302809372800C0DB29 /* CharctersResultDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DD2F2809372800C0DB29 /* CharctersResultDataModel.swift */; };
@@ -39,9 +45,22 @@
 		FCF7DD522809830900C0DB29 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF7DD512809830900C0DB29 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FCDBAA96280A6CA1000474CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC14F19A28083C4500BFB9D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC14F1A128083C4500BFB9D1;
+			remoteInfo = Kolo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		04F5E67D697CB1791D129B55 /* Pods-Kolo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolo.debug.xcconfig"; path = "Target Support Files/Pods-Kolo/Pods-Kolo.debug.xcconfig"; sourceTree = "<group>"; };
+		6995459258D560ABFCA646C7 /* Pods-KoloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoloTests.release.xcconfig"; path = "Target Support Files/Pods-KoloTests/Pods-KoloTests.release.xcconfig"; sourceTree = "<group>"; };
+		76DD1DB90927CF0396545186 /* Pods-KoloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoloTests.debug.xcconfig"; path = "Target Support Files/Pods-KoloTests/Pods-KoloTests.debug.xcconfig"; sourceTree = "<group>"; };
 		78BFAD9C85DEEF9EC510B6E2 /* Pods-Kolo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kolo.release.xcconfig"; path = "Target Support Files/Pods-Kolo/Pods-Kolo.release.xcconfig"; sourceTree = "<group>"; };
+		C2407631FCE8E5BAB16EAEE5 /* Pods_KoloTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoloTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5A1FA1AB1AAEA8ACC71452 /* Pods_Kolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC14F1A228083C4500BFB9D1 /* Kolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC14F1A528083C4500BFB9D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +79,12 @@
 		FCCC819028083FB600DC91E6 /* ComicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCCC819128083FB600DC91E6 /* ComicCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicCollectionViewCell.xib; sourceTree = "<group>"; };
 		FCCC819728084B9C00DC91E6 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		FCDBAA92280A6CA1000474CA /* KoloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCDBAA9B280A6D16000474CA /* CharactersViewModelUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelUnitTest.swift; sourceTree = "<group>"; };
+		FCDBAA9F280A6EE2000474CA /* CharactersViewModelDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModelDummyData.swift; sourceTree = "<group>"; };
+		FCDBAAA1280A715F000474CA /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCDBAAA7280A74FE000474CA /* ComicsViewModelUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsViewModelUnitTest.swift; sourceTree = "<group>"; };
+		FCDBAAA9280A750A000474CA /* ComicViewModelDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicViewModelDummyData.swift; sourceTree = "<group>"; };
 		FCF7DD2A280925ED00C0DB29 /* CharactersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataModel.swift; sourceTree = "<group>"; };
 		FCF7DD2D28092C6A00C0DB29 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FCF7DD2F2809372800C0DB29 /* CharctersResultDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharctersResultDataModel.swift; sourceTree = "<group>"; };
@@ -82,6 +107,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FB4888838B1C5365136582C /* Pods_Kolo.framework in Frameworks */,
+				BD805B252826C396C38364DA /* (null) in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDBAA8F280A6CA1000474CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82AE5C0DD1125B922853F7F8 /* Pods_KoloTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +127,8 @@
 			children = (
 				04F5E67D697CB1791D129B55 /* Pods-Kolo.debug.xcconfig */,
 				78BFAD9C85DEEF9EC510B6E2 /* Pods-Kolo.release.xcconfig */,
+				76DD1DB90927CF0396545186 /* Pods-KoloTests.debug.xcconfig */,
+				6995459258D560ABFCA646C7 /* Pods-KoloTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -100,7 +136,9 @@
 		F2D17459E2E8F8CDB92FCA0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCDBAAA1280A715F000474CA /* SwiftyJSON.framework */,
 				CE5A1FA1AB1AAEA8ACC71452 /* Pods_Kolo.framework */,
+				C2407631FCE8E5BAB16EAEE5 /* Pods_KoloTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				FC14F1A428083C4500BFB9D1 /* Kolo */,
+				FCDBAA93280A6CA1000474CA /* KoloTests */,
 				FC14F1A328083C4500BFB9D1 /* Products */,
 				D8BCAF613954A342AA6610CE /* Pods */,
 				F2D17459E2E8F8CDB92FCA0A /* Frameworks */,
@@ -119,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				FC14F1A228083C4500BFB9D1 /* Kolo.app */,
+				FCDBAA92280A6CA1000474CA /* KoloTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +270,33 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		FCDBAA93280A6CA1000474CA /* KoloTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCDBAAA6280A74EE000474CA /* Comic */,
+				FCDBAAA5280A74E4000474CA /* Character */,
+			);
+			path = KoloTests;
+			sourceTree = "<group>";
+		};
+		FCDBAAA5280A74E4000474CA /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				FCDBAA9B280A6D16000474CA /* CharactersViewModelUnitTest.swift */,
+				FCDBAA9F280A6EE2000474CA /* CharactersViewModelDummyData.swift */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		FCDBAAA6280A74EE000474CA /* Comic */ = {
+			isa = PBXGroup;
+			children = (
+				FCDBAAA7280A74FE000474CA /* ComicsViewModelUnitTest.swift */,
+				FCDBAAA9280A750A000474CA /* ComicViewModelDummyData.swift */,
+			);
+			path = Comic;
+			sourceTree = "<group>";
+		};
 		FCF7DD29280925D600C0DB29 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +385,26 @@
 			productReference = FC14F1A228083C4500BFB9D1 /* Kolo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FCDBAA91280A6CA1000474CA /* KoloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCDBAA98280A6CA1000474CA /* Build configuration list for PBXNativeTarget "KoloTests" */;
+			buildPhases = (
+				C8C908D819CF52E954AE2157 /* [CP] Check Pods Manifest.lock */,
+				FCDBAA8E280A6CA1000474CA /* Sources */,
+				FCDBAA8F280A6CA1000474CA /* Frameworks */,
+				FCDBAA90280A6CA1000474CA /* Resources */,
+				24DC0EA8CD9156F9A6DA89BF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCDBAA97280A6CA1000474CA /* PBXTargetDependency */,
+			);
+			name = KoloTests;
+			productName = KoloTests;
+			productReference = FCDBAA92280A6CA1000474CA /* KoloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -330,6 +417,10 @@
 				TargetAttributes = {
 					FC14F1A128083C4500BFB9D1 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					FCDBAA91280A6CA1000474CA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = FC14F1A128083C4500BFB9D1;
 					};
 				};
 			};
@@ -347,6 +438,7 @@
 			projectRoot = "";
 			targets = (
 				FC14F1A128083C4500BFB9D1 /* Kolo */,
+				FCDBAA91280A6CA1000474CA /* KoloTests */,
 			);
 		};
 /* End PBXProject section */
@@ -366,9 +458,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCDBAA90280A6CA1000474CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24DC0EA8CD9156F9A6DA89BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoloTests/Pods-KoloTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoloTests/Pods-KoloTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoloTests/Pods-KoloTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8C908D819CF52E954AE2157 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoloTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F7B5BD4F05431254E6EE2347 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,7 +578,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCDBAA8E280A6CA1000474CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCDBAAA8280A74FE000474CA /* ComicsViewModelUnitTest.swift in Sources */,
+				FCDBAAAA280A750A000474CA /* ComicViewModelDummyData.swift in Sources */,
+				FCDBAA9C280A6D16000474CA /* CharactersViewModelUnitTest.swift in Sources */,
+				FCDBAAA0280A6EE2000474CA /* CharactersViewModelDummyData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCDBAA97280A6CA1000474CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC14F1A128083C4500BFB9D1 /* Kolo */;
+			targetProxy = FCDBAA96280A6CA1000474CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FC14F1AB28083C4500BFB9D1 /* Main.storyboard */ = {
@@ -586,7 +743,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AUQ5RLV744;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kolo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -615,7 +772,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AUQ5RLV744;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kolo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -636,6 +793,42 @@
 			};
 			name = Release;
 		};
+		FCDBAA99280A6CA1000474CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76DD1DB90927CF0396545186 /* Pods-KoloTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koloapp.KoloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kolo.app/Kolo";
+			};
+			name = Debug;
+		};
+		FCDBAA9A280A6CA1000474CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6995459258D560ABFCA646C7 /* Pods-KoloTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koloapp.KoloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kolo.app/Kolo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -653,6 +846,15 @@
 			buildConfigurations = (
 				FC14F1B728083C4500BFB9D1 /* Debug */,
 				FC14F1B828083C4500BFB9D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCDBAA98280A6CA1000474CA /* Build configuration list for PBXNativeTarget "KoloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCDBAA99280A6CA1000474CA /* Debug */,
+				FCDBAA9A280A6CA1000474CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
