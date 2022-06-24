@@ -16,6 +16,8 @@
 		FC14F1AF28083C4500BFB9D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC14F1AE28083C4500BFB9D1 /* Assets.xcassets */; };
 		FC14F1B228083C4500BFB9D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC14F1B028083C4500BFB9D1 /* LaunchScreen.storyboard */; };
 		FC14F1BA28083C5E00BFB9D1 /* KoloLandingTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC14F1B928083C5E00BFB9D1 /* KoloLandingTabBarViewController.swift */; };
+		FCA6CF8B2861AF8A0055AE60 /* LoaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6CF892861AF8A0055AE60 /* LoaderCollectionReusableView.swift */; };
+		FCA6CF8C2861AF8A0055AE60 /* LoaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCA6CF8A2861AF8A0055AE60 /* LoaderCollectionReusableView.xib */; };
 		FCCC817E28083E5D00DC91E6 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC817C28083E5D00DC91E6 /* CharactersViewController.swift */; };
 		FCCC817F28083E5D00DC91E6 /* CharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCCC817D28083E5D00DC91E6 /* CharactersViewController.xib */; };
 		FCCC818528083E9A00DC91E6 /* ComicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC818328083E9A00DC91E6 /* ComicsViewController.swift */; };
@@ -70,6 +72,8 @@
 		FC14F1B128083C4500BFB9D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC14F1B328083C4500BFB9D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC14F1B928083C5E00BFB9D1 /* KoloLandingTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoloLandingTabBarViewController.swift; sourceTree = "<group>"; };
+		FCA6CF892861AF8A0055AE60 /* LoaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		FCA6CF8A2861AF8A0055AE60 /* LoaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		FCCC817C28083E5D00DC91E6 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		FCCC817D28083E5D00DC91E6 /* CharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersViewController.xib; sourceTree = "<group>"; };
 		FCCC818328083E9A00DC91E6 /* ComicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				FC14F1AE28083C4500BFB9D1 /* Assets.xcassets */,
 				FC14F1B028083C4500BFB9D1 /* LaunchScreen.storyboard */,
 				FC14F1B328083C4500BFB9D1 /* Info.plist */,
+				FCA6CF892861AF8A0055AE60 /* LoaderCollectionReusableView.swift */,
+				FCA6CF8A2861AF8A0055AE60 /* LoaderCollectionReusableView.xib */,
 			);
 			path = Kolo;
 			sourceTree = "<group>";
@@ -452,6 +458,7 @@
 				FCCC817F28083E5D00DC91E6 /* CharactersViewController.xib in Resources */,
 				FC14F1B228083C4500BFB9D1 /* LaunchScreen.storyboard in Resources */,
 				FCF7DD49280963C300C0DB29 /* SearchHistoryTokenTableViewCell.xib in Resources */,
+				FCA6CF8C2861AF8A0055AE60 /* LoaderCollectionReusableView.xib in Resources */,
 				FC14F1AF28083C4500BFB9D1 /* Assets.xcassets in Resources */,
 				FCCC819328083FB600DC91E6 /* ComicCollectionViewCell.xib in Resources */,
 				FC14F1AD28083C4500BFB9D1 /* Main.storyboard in Resources */,
@@ -559,6 +566,7 @@
 				FCF7DD4128094C0400C0DB29 /* ComicsResultsDataModel.swift in Sources */,
 				FCCC818528083E9A00DC91E6 /* ComicsViewController.swift in Sources */,
 				FCF7DD48280963C300C0DB29 /* SearchHistoryTokenTableViewCell.swift in Sources */,
+				FCA6CF8B2861AF8A0055AE60 /* LoaderCollectionReusableView.swift in Sources */,
 				FCF7DD3D28094AC000C0DB29 /* ThumbnailDataModel.swift in Sources */,
 				FCF7DD4528095FF100C0DB29 /* SearchHistoryTableViewController.swift in Sources */,
 				FC14F1BA28083C5E00BFB9D1 /* KoloLandingTabBarViewController.swift in Sources */,
