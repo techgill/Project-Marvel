@@ -28,4 +28,28 @@ class Utilities {
         
         return label
     }
+    
+    class func saveApiRes(data: Data) {
+        Utilities.defaults.setValue(data, forKey: AAConstants.apiData)
+    }
+    
+    class func getApiRes() -> Data? {
+        Utilities.defaults.object(forKey: AAConstants.apiData) as? Data
+    }
+    
+    class func saveString(string: String, forKey: String) {
+        Utilities.defaults.set(string, forKey: forKey)
+    }
+    
+    class func getString(forKey: String) -> String {
+        Utilities.defaults.string(forKey: forKey) ?? ""
+    }
+    
+    static let indicatorView: UIActivityIndicatorView = {
+      let view = UIActivityIndicatorView(style: .large)
+      view.color = .black
+      view.startAnimating()
+      return view
+    }()
+    
 }

@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Haneke
 
 extension UIImageView {
 
-    //// Returns activity indicator view centrally aligned inside the UIImageView
+    // Returns activity indicator view centrally aligned inside the UIImageView
     private var activityIndicator: UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.hidesWhenStopped = true
@@ -36,7 +37,7 @@ extension UIImageView {
         return activityIndicator
     }
 
-    /// Asynchronous downloading and setting the image from the provided urlString
+    // Asynchronous downloading and setting the image from the provided urlString
     func setImageFrom(_ urlString: String, completion: (() -> Void)? = nil) {
         guard let url = URL(string: urlString) else { return }
 
@@ -68,5 +69,44 @@ extension UIImageView {
             session.finishTasksAndInvalidate()
         }
         downloadImageTask.resume()
+    }
+    
+    
+    
+    //MARK: - new image loader
+    static let loadingViewTag = 1938123987
+    func setImageFromURLWithLoader(urlString:String){
+         self.showLoading()
+        if let url = URL(string:urlString) {
+            self.hnk_setImage(from: url, placeholder: nil, success: {
+                image in
+                self.image = image
+                self.stopLoading()
+            }, failure: nil)
+        } else {
+            self.stopLoading()
+        }
+        
+    }
+    func showLoading(style: UIActivityIndicatorView.Style = .medium) {
+        self.image = nil
+        var loading = viewWithTag(UIImageView.loadingViewTag) as? UIActivityIndicatorView
+        if loading == nil {
+            loading = UIActivityIndicatorView(style: style)
+        }
+
+        loading?.translatesAutoresizingMaskIntoConstraints = false
+        loading!.startAnimating()
+        loading!.hidesWhenStopped = true
+        loading?.tag = UIImageView.loadingViewTag
+        addSubview(loading!)
+      loading?.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        loading?.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    }
+
+    func stopLoading() {
+        let loading = viewWithTag(UIImageView.loadingViewTag) as? UIActivityIndicatorView
+        loading?.stopAnimating()
+        loading?.removeFromSuperview()
     }
 }

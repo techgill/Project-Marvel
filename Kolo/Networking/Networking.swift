@@ -42,16 +42,35 @@ class Networking {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = RequestType.GET.rawValue
         
+        request.addValue(Utilities.getString(forKey: AAConstants.eTag), forHTTPHeaderField: "If-None-Match")
+        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        
         let task = URLSession.shared.dataTask(with: request) { data, res, error in
             if let _error = error {
                 print("error------\(_error.localizedDescription)")
                 completion(.failure(NetworkError.ERROR))
             }
             
+            if let httpResponse = res as? HTTPURLResponse {
+                if httpResponse.statusCode == 304 {
+                    if let data = Utilities.getApiRes() {
+                        do {
+                            let json = try JSON(data: data)
+                            print("json-------\(json)")
+                            completion(.success(json))
+                        }
+                        catch {
+                            completion(.failure(NetworkError.PARSINGERROR))
+                        }
+                    }
+                    return
+                }
+            }
+            
             guard let data = data else {
                 return completion(.failure(NetworkError.INVALIDDATA))
             }
-            
+            Utilities.saveApiRes(data: data)
             do {
                 let json = try JSON(data: data)
                 print("json-------\(json)")

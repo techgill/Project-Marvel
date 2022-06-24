@@ -26,5 +26,7 @@ struct AAConstants {
     static let publicKey = "dd9416431c8b03ff80d64353bb7d1e40"
     static let privateKey = "c72dbad49cb610a2495e8c036df0f99180c27e15"
     
+    static let apiData = "apiData"
+    static let eTag = "eTag"
     
 }

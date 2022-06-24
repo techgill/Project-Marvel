@@ -1,15 +1,18 @@
 PODS:
+  - Haneke (1.0.2)
   - SVProgressHUD (2.2.6):
     - SVProgressHUD/Core (= 2.2.6)
   - SVProgressHUD/Core (2.2.6)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - Haneke
   - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
+    - Haneke
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -22,9 +25,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
+  Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
   SVProgressHUD: de812b4f0e1d65358f0064416473174ae619843f
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 5f14062fe3aecbf87c1f3993ef82b11e44cb1c17
+PODFILE CHECKSUM: 3c0ff24b1f0fe77b3b1ca794497427ad00c0812e
 
 COCOAPODS: 1.11.2

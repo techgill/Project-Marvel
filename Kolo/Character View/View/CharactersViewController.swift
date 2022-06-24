@@ -61,9 +61,11 @@ class CharactersViewController: UIViewController {
     }
     
     func setUpCollectionView() {
+        collectionView.register(UINib(nibName: "LoaderCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "LoaderCollectionReusableView")
         collectionView.register(UINib(nibName: AAConstants.comicCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: AAConstants.comicCollectionViewCell)
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.backgroundView = Utilities.indicatorView
     }
     
     func bindUI() {
@@ -77,6 +79,7 @@ class CharactersViewController: UIViewController {
     func updateBindUI() {
         noDataLabel.isHidden = vm.getCellCount() != 0
         collectionView.reloadData()
+        collectionView.backgroundView = nil
     }
 
 }
@@ -144,5 +147,18 @@ extension CharactersViewController: UICollectionViewDelegate, UICollectionViewDa
             let safariVC = SFSafariViewController(url: url)
             self.present(safariVC, animated: true, completion: nil)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return vm.getCellCount() == 0 ? CGSize.zero:CGSize(width: collectionView.bounds.size.width, height: 40)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionFooter {
+            let aFooterView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "LoaderCollectionReusableView", for: indexPath) as! LoaderCollectionReusableView
+            aFooterView.fillDetails(isLoaded: vm.isLoaded)
+            return aFooterView
+        }
+        return UICollectionReusableView()
     }
 }

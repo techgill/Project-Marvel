@@ -38,7 +38,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ete-GP-dF3" secondAttribute="trailing" id="fbL-6E-ZqS"/>
                 <constraint firstItem="ete-GP-dF3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="owq-8l-AU1"/>
             </constraints>
-            <point key="canvasLocation" x="-39" y="-11"/>
+            <point key="canvasLocation" x="-39.130434782608695" y="-11.383928571428571"/>
         </view>
     </objects>
     <resources>

@@ -9,9 +9,21 @@ import UIKit
 
 class LoaderCollectionReusableView: UICollectionReusableView {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func fillDetails(isLoaded: Bool) {
+        if isLoaded {
+            activityIndicator.stopAnimating()
+            activityIndicator.isHidden = true
+        }
+        else {
+            activityIndicator.startAnimating()
+            activityIndicator.isHidden = false
+        }
     }
     
 }

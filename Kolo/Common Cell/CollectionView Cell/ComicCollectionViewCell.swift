@@ -21,13 +21,13 @@ class ComicCollectionViewCell: UICollectionViewCell {
     }
     
     func fillDetails(vm: CharactersViewModel, index: Int) {
-        imageView.setImageFrom(vm.getImage(index: index), completion: nil)
+        imageView.setImageFromURLWithLoader(urlString: vm.getImage(index: index))
         headingLabel.text = vm.getName(index: index)
         descriptionLabel.text = vm.getDescription(index: index)
     }
     
     func fillDetails(vm: ComicsViewModel, index: Int) {
-        imageView.setImageFrom(vm.getImage(index: index), completion: nil)
+        imageView.setImageFromURLWithLoader(urlString: vm.getImage(index: index))
         headingLabel.text = vm.getTitle(index: index)
         descriptionLabel.text = vm.getDescription(index: index)
     }

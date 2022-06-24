@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import SVProgressHUD
 import SwiftyJSON
 
 class CharactersViewModel {
@@ -15,10 +14,14 @@ class CharactersViewModel {
     var characterData = CharctersDataModel()
     var observer: Observable<String>
     
+    var isLoaded = false
+    
     var paginationID = 0
     var searchText: String? {
         didSet {
+            isLoaded = false
             paginationID = 0
+            characterData = CharctersDataModel()
             callNetCharcters(offset: 0)
         }
     }
@@ -71,8 +74,13 @@ class CharactersViewModel {
         
         if characterData.results[index].id != paginationID {
             paginationID = characterData.results[index].id
+            isLoaded = false
             
             callNetCharcters(offset: characterData.limit + characterData.offset)
+        }
+        else {
+            isLoaded = true
+            observer.value = ""
         }
     }
     
@@ -84,9 +92,7 @@ class CharactersViewModel {
             params = ["limit":20, "offset": offset, "nameStartsWith": text]
         }
         
-        SVProgressHUD.show()
         Networking.shared.request(urlStr: URLExt.characters, param: params) { result in
-            SVProgressHUD.dismiss()
             switch result {
             case .success(let json):
                 if json["code"].stringValue == "200" {
@@ -102,6 +108,7 @@ class CharactersViewModel {
     }
     
     func handleResponse(json: JSON) {
+        Utilities.saveString(string: json["etag"].stringValue, forKey: AAConstants.eTag)
         var temp = characterData
         
         if paginationID == 0 {

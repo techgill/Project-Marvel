@@ -8,6 +8,7 @@ target 'Kolo' do
   # Pods for Kolo
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+  pod 'Haneke'
 
 end
 

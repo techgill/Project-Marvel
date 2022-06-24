@@ -15,10 +15,14 @@ class ComicsViewModel {
     var comicsData = ComicsDataModel()
     var observer = Observable("")
     
+    var isLoaded = false
+    
     var paginationID = 0
     var selectedFilter: String? {
         didSet {
+            isLoaded = false
             paginationID = 0
+            comicsData = ComicsDataModel()
             callNetComics(offset: 0)
         }
     }
@@ -70,8 +74,13 @@ class ComicsViewModel {
         
         if comicsData.results[index].id != paginationID {
             paginationID = comicsData.results[index].id
+            isLoaded = false
             
             callNetComics(offset: comicsData.limit + comicsData.offset)
+        }
+        else {
+            isLoaded = true
+            observer.value = ""
         }
     }
     
@@ -83,9 +92,9 @@ class ComicsViewModel {
             params = ["limit":20, "offset": offset, "dateDescriptor": filter]
         }
         
-        SVProgressHUD.show()
+        
         Networking.shared.request(urlStr: URLExt.comics, param: params) { result in
-            SVProgressHUD.dismiss()
+            
             switch result {
             case .success(let json):
                 if json["code"].stringValue == "200" {
